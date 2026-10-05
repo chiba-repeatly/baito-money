@@ -13,7 +13,8 @@ form.addEventListener("submit",e=>{
  const hours=worked/60,daily=wage*hours,monthly=daily*days,total=hours*days;
  document.querySelector("#daily-pay").textContent=yen(daily);
  document.querySelector("#monthly-pay").textContent=yen(monthly);
- document.querySelector("#total-hours").textContent=total.toLocaleString("ja-JP",{maximumFractionDigits:1})+" 時間";\n document.querySelector("#result").scrollIntoView({behavior:"smooth",block:"nearest"});
+ document.querySelector("#total-hours").textContent=total.toLocaleString("ja-JP",{maximumFractionDigits:1})+" 時間";
+ document.querySelector("#result").scrollIntoView({behavior:"smooth",block:"nearest"});
  const goal=document.querySelector("#goal-box");
  if(target>0){
    goal.classList.remove("hidden");
