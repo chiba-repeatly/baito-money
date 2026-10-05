@@ -33,6 +33,7 @@
         <label>休憩時間 <span>分</span><input id="break-minutes" type="number" min="0" step="1" inputmode="numeric" value="0" required></label>
         <label>勤務日数 <span>日／月</span><input id="work-days" type="number" min="1" max="31" step="1" inputmode="numeric" placeholder="例：12" required></label>
         <label>目標月収 <span>円（任意）</span><input id="target-income" type="number" min="0" step="1" inputmode="numeric" placeholder="例：100000"></label>
+        <label><input id="late-premium" type="checkbox"> 22:00〜翌5:00の深夜割増（25%）を計算する</label>
         <p id="error" class="error" role="alert" aria-live="polite"></p>
         <button type="submit">計算する</button>
       </form>
@@ -43,12 +44,13 @@
       <div class="stats">
         <div><span>1日の給与</span><strong id="daily-pay">-- 円</strong></div>
         <div><span>総勤務時間</span><strong id="total-hours">-- 時間</strong></div>
+        <div><span>深夜勤務</span><strong id="late-hours">-- 時間</strong></div>
       </div>
       <div id="goal-box" class="goal hidden">
         <span>目標月収まで</span><strong id="remaining-pay">-- 円</strong>
         <p id="remaining-hours"></p>
       </div>
-      <p class="note">※概算です。実際の給与は深夜割増・残業・税金・勤務先の給与規定などで異なる場合があります。</p>
+      <p class="note">※概算です。深夜割増はチェック時のみ反映します。時間外・休日割増、税金、各種手当などは含みません。実際の給与は勤務先の規定をご確認ください。</p>
     </section>
   </div>
   <section class="info">
