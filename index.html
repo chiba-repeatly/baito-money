@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>バイト代計算｜時給・勤務時間から月収を簡単計算｜バイトマネー</title>
+  <title>バイト代計算｜時給・勤務時間から月収を無料計算｜バイトマネー</title>
   <meta name="description" content="時給、出勤・退勤時間、休憩、勤務日数から1日のバイト代と月収を無料計算。目標月収まであと何時間必要かもわかる大学生・アルバイト向け給与計算ツール。">
-  <link rel="stylesheet" href="style.css">
+  <meta name="robots" content="index,follow">\n  <link rel="canonical" href="https://chiba-repeatly.github.io/baito-money/">\n  <meta property="og:title" content="バイト代計算｜バイトマネー">\n  <meta property="og:description" content="時給と勤務時間から日給・月収・目標までの必要時間を無料計算。">\n  <meta property="og:url" content="https://chiba-repeatly.github.io/baito-money/">\n  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <header class="site-header"><div class="wrap brand">バイトマネー <span>BAITO MONEY</span></div></header>
 <main class="wrap">
   <section class="hero">
-    <p class="eyebrow">バイトのお金を、もっとわかりやすく。</p>
+    <p class="eyebrow">無料・登録不要</p>
     <h1>バイト代・月収をかんたん計算</h1>
     <p>時給と勤務時間を入力するだけ。今月いくら稼げるか、目標まであとどれくらいかをすぐ確認できます。</p>
   </section>
@@ -26,7 +26,7 @@
           <label>退勤時間<input id="end-time" type="time" required></label>
         </div>
         <label>休憩時間 <span>分</span><input id="break-minutes" type="number" min="0" step="1" inputmode="numeric" value="0" required></label>
-        <label>勤務日数 <span>日／月</span><input id="work-days" type="number" min="1" step="1" inputmode="numeric" placeholder="例：12" required></label>
+        <label>勤務日数 <span>日／月</span><input id="work-days" type="number" min="1" max="31" step="1" inputmode="numeric" placeholder="例：12" required></label>
         <label>目標月収 <span>円（任意）</span><input id="target-income" type="number" min="0" step="1" inputmode="numeric" placeholder="例：100000"></label>
         <p id="error" class="error" role="alert" aria-live="polite"></p>
         <button type="submit">計算する</button>
