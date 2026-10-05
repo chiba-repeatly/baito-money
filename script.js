@@ -6,14 +6,14 @@ form.addEventListener("submit",e=>{
  e.preventDefault();
  const wage=num("#hourly-wage"),start=document.querySelector("#start-time").value,end=document.querySelector("#end-time").value,breakM=num("#break-minutes"),days=num("#work-days"),target=num("#target-income"),error=document.querySelector("#error");
  error.textContent="";
- if(!wage||wage<=0||!start||!end||!Number.isFinite(breakM)||breakM<0||!days||days<=0){error.textContent="時給・勤務時間・休憩時間・勤務日数を正しく入力してください。";return}
+ if(!wage||wage<=0||!start||!end||!Number.isFinite(breakM)||breakM<0||!Number.isInteger(days)||days<1||days>31){error.textContent="時給・勤務時間・休憩時間・勤務日数を正しく入力してください。";return}
  let duration=minutes(end)-minutes(start); if(duration<=0) duration+=1440;
  const worked=duration-breakM;
  if(worked<=0){error.textContent="休憩時間が勤務時間以上になっています。";return}
  const hours=worked/60,daily=wage*hours,monthly=daily*days,total=hours*days;
  document.querySelector("#daily-pay").textContent=yen(daily);
  document.querySelector("#monthly-pay").textContent=yen(monthly);
- document.querySelector("#total-hours").textContent=total.toLocaleString("ja-JP",{maximumFractionDigits:1})+" 時間";
+ document.querySelector("#total-hours").textContent=total.toLocaleString("ja-JP",{maximumFractionDigits:1})+" 時間";\n document.querySelector("#result").scrollIntoView({behavior:"smooth",block:"nearest"});
  const goal=document.querySelector("#goal-box");
  if(target>0){
    goal.classList.remove("hidden");
