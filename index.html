@@ -10,6 +10,18 @@
   <meta property="og:title" content="バイト代計算｜バイトマネー">
   <meta property="og:description" content="時給と勤務時間から日給・月収・目標までの必要時間を無料計算。">
   <meta property="og:url" content="https://chiba-repeatly.github.io/baito-money/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "バイトマネー",
+    "url": "https://chiba-repeatly.github.io/baito-money/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"},
+    "description": "時給と勤務時間からバイト代・月収・目標月収までの必要時間を計算できる無料Webツール。"
+  }
+  </script>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -58,6 +70,15 @@
     <p>時給、出勤時間、退勤時間、休憩時間、1か月の勤務日数を入力すると、1日の給与と予想月収を計算します。退勤時間が出勤時間より早い場合は、日付をまたぐ勤務として計算します。</p>
     <h2>月収目標から必要な勤務時間も計算</h2>
     <p>目標月収を入力すると、予想月収との差額と、現在の時給であと何時間働けば目標に届くかを表示します。</p>
+    <h2>計算例</h2>
+    <p>たとえば時給1,200円で、1日5時間・月12日働く場合、概算月収は72,000円です。目標月収を100,000円に設定すると、残り28,000円と必要な追加勤務時間の目安も確認できます。</p>
+    <h2>よくある質問</h2>
+    <h3>日付をまたぐ深夜バイトも計算できますか？</h3>
+    <p>はい。退勤時刻が出勤時刻より早い場合は翌日の退勤として計算します。深夜割増を有効にすると、22時から翌5時までの勤務時間に25%の割増を加えた概算を表示します。</p>
+    <h3>表示された金額がそのまま給料になりますか？</h3>
+    <p>いいえ。バイトマネーは給与の目安を確認するための計算ツールです。時間外・休日割増、各種手当、税金などは個別に反映していないため、実際の給与明細とは異なる場合があります。</p>
+    <h3>登録や料金は必要ですか？</h3>
+    <p>現在の給与計算機能は登録不要・無料で利用できます。</p>
   </section>
 </main>
 <footer><div class="wrap">© バイトマネー</div></footer>
