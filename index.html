@@ -43,6 +43,8 @@
           <label>退勤時間<input id="end-time" type="time" required></label>
         </div>
         <label>休憩時間 <span>分</span><input id="break-minutes" type="number" min="0" step="1" inputmode="numeric" value="0" required></label>
+        <label>深夜時間帯に取った休憩 <span>分（任意）</span><input id="night-break-minutes" type="number" min="0" step="1" inputmode="numeric" value="0" aria-describedby="night-break-help"></label>
+        <p id="night-break-help" class="field-help">休憩のうち22:00〜翌5:00に取った分数を入力。深夜割増の計算に反映します。</p>
         <label>勤務日数 <span>日／月</span><input id="work-days" type="number" min="1" max="31" step="1" inputmode="numeric" placeholder="例：12" required></label>
         <label>目標月収 <span>円（任意）</span><input id="target-income" type="number" min="0" step="1" inputmode="numeric" placeholder="例：100000"></label>
         <label><input id="late-premium" type="checkbox"> 22:00〜翌5:00の深夜割増（25%）を計算する</label>
@@ -62,7 +64,7 @@
         <span>目標月収まで</span><strong id="remaining-pay">-- 円</strong>
         <p id="remaining-hours"></p>
       </div>
-      <p class="note">※概算です。深夜割増はチェック時のみ反映します。時間外・休日割増、税金、各種手当などは含みません。実際の給与は勤務先の規定をご確認ください。</p>
+      <p class="note">※概算です。深夜勤務時間は深夜時間帯の休憩を除いた値です。深夜割増はチェック時のみ反映します。時間外・休日割増、税金、各種手当などは含みません。実際の給与は勤務先の規定をご確認ください。</p>
     </section>
   </div>
   <section class="info"><h2>関連ツール</h2><p><a href="target-income.html">目標月収から必要なバイト時間・勤務日数を逆算する</a></p>
