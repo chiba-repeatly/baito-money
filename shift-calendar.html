@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>バイトのシフト管理カレンダー｜月収・勤務時間を自動集計｜バイトマネー</title>
+<meta name="description" content="無料・登録不要のバイト用シフト管理カレンダー。日付・時給・出退勤・休憩を入力して勤務予定を保存。月ごとの勤務時間と概算給料を自動集計。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://chiba-repeatly.github.io/baito-money/shift-calendar.html">
+<meta property="og:type" content="website"><meta property="og:title" content="バイトのシフト管理カレンダー｜バイトマネー"><meta property="og:description" content="シフトを記録して月収をかんたん集計。無料・登録不要。">
+<meta property="og:url" content="https://chiba-repeatly.github.io/baito-money/shift-calendar.html">
+<link rel="stylesheet" href="style.css"><script src="shift-calendar.js" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"バイトのシフト管理カレンダー","url":"https://chiba-repeatly.github.io/baito-money/shift-calendar.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"}}</script>
+</head>
+<body><header class="site-header"><div class="wrap brand"><a href="./">バイトマネー</a> <span>BAITO MONEY</span></div></header>
+<main class="wrap">
+<section class="hero"><p class="eyebrow">無料・登録不要</p><h1>バイトのシフト管理カレンダー</h1><p>勤務予定を日付ごとに記録。月の勤務時間と概算給料を自動で集計します。</p></section>
+<div class="layout calendar-layout">
+<section class="card">
+<div class="calendar-heading"><button type="button" class="button-subtle" id="prev-month" aria-label="前の月">‹</button><h2 id="month-label" aria-live="polite"></h2><button type="button" class="button-subtle" id="next-month" aria-label="次の月">›</button></div>
+<div class="calendar-grid" id="calendar-grid" aria-label="シフトカレンダー"></div>
+<p class="field-help calendar-hint">日付を押すと、その日のシフトを入力・編集できます。青い印は登録済みの日です。</p>
+<div class="stats calendar-stats"><div><span>今月の勤務日数</span><strong id="month-days">0 日</strong></div><div><span>今月の勤務時間</span><strong id="month-hours">0 時間</strong></div></div>
+<p class="result-label calendar-pay-label">今月の概算給料</p><p class="big" id="month-pay">0 円</p>
+</section>
+<section class="card"><h2 id="form-heading">シフトを登録する</h2>
+<form id="shift-form" novalidate>
+<label>勤務日<input type="date" id="shift-date" required></label>
+<label>時給 <span>円</span><input type="number" id="shift-wage" min="1" step="1" inputmode="numeric" placeholder="例：1200" required></label>
+<div class="two"><label>出勤時間<input type="time" id="shift-start" required></label><label>退勤時間<input type="time" id="shift-end" required></label></div>
+<label>休憩時間 <span>分</span><input type="number" id="shift-break" min="0" step="1" value="0" required></label>
+<p id="shift-error" class="error" role="alert" aria-live="polite"></p>
+<button type="submit" id="save-shift">シフトを保存</button>
+<button type="button" id="delete-shift" class="button-danger hidden">この日のシフトを削除</button>
+</form>
+<p class="note">データはこのブラウザ内（localStorage）にのみ保存します。別の端末には同期されず、ブラウザのデータ削除で消える場合があります。1日1件まで登録可能です。深夜・時間外・休日割増、税金、手当は計算に含まない概算です。</p>
+</section></div>
+<section class="info"><h2>シフト管理カレンダーの使い方</h2><p>カレンダーの日付を選び、時給・出勤時間・退勤時間・休憩時間を入力して保存します。登録済みの日を選ぶと内容を変更・削除できます。退勤が出勤より早い場合は翌日の退勤として計算します。</p>
+<h2>月収の計算方法</h2><p>各シフトの実働時間は「勤務時間 − 休憩時間」です。概算給料は「実働時間 × 時給」で計算し、表示月のシフトを合計します。勤務日が月末で翌月にまたがる場合も、出勤日が属する月にまとめて集計します。</p>
+<h2>よくある質問</h2><h3>登録やログインは必要ですか？</h3><p>いいえ。無料で利用でき、アカウント登録も不要です。</p>
+<h3>シフトのデータはほかのスマホにも表示されますか？</h3><p>いいえ。データは保存したブラウザだけで利用できます。機種変更や閲覧データの削除にご注意ください。</p>
+<h3>深夜手当は計算されますか？</h3><p>このカレンダーでは深夜割増を含みません。深夜割増の概算には<a href="./">バイト代計算ツール</a>をご利用ください。</p>
+<p><a href="./">バイト代計算ツール</a> ・ <a href="target-income.html">目標月収から必要勤務日数を逆算</a></p></section>
+</main><footer><div class="wrap">© バイトマネー ・ <a href="privacy.html">プライバシーポリシー</a> ・ <a href="about.html">このサイトについて</a></div></footer>
+</body></html>
